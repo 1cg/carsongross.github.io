@@ -1,0 +1,200 @@
+
+.jerseycolorpicker {
+	/*
+	@icon-half: 15px;
+	@group-width: (4*@icon-half);
+	@group-height: 30px;
+	*/
+
+	text-align: center;
+}
+
+.jerseycolorpicker .groups {
+	position: relative;
+	max-width: 150px;
+	float: left;
+}
+
+.jerseycolorpicker .group,
+.jerseycolorpicker .title
+{ padding: 4px; }
+
+.jerseycolorpicker .title {
+	/* color: @ts-color-gray; */
+	display: block;
+	text-align: left;
+}
+
+.jerseycolorpicker .group {
+	width: 60px;
+	display: inline-block;
+}
+
+.jerseycolorpicker .group .icons {
+	position: relative;
+	height: 30px;
+}
+
+.jerseycolorpicker .group .icons .top1,
+.jerseycolorpicker .group .icons .top2
+{
+	background-image: url("images/jersey_top_mask.png");
+	width: 15px;
+}
+
+.jerseycolorpicker .group .icons .top2 {
+	background-position: -15px;
+}
+
+.jerseycolorpicker .group .icons .bottom
+{
+	background: url("images/jersey_bottom_mask.png");
+	width: 30px;	/* 2 half */
+}
+
+.jerseycolorpicker .group .icons > span {
+	/* background-color: @ts-color-gray; */
+	display: inline-block;
+	height: 30px;
+}
+
+.jerseycolorpicker .click-msg {
+	background-color: #FFFFFF;
+	position: absolute;
+	left: 0;
+	top: 30%;
+	width: 100%;
+	display: inline-block;
+	cursor: pointer;
+	opacity: .8;
+}
+
+.jersey-colors-tooltip.tstt-tooltip {
+	background-color: #FFFFFF;
+	z-index: 1;
+	border: 1px solid #000000;
+	position: absolute;
+}
+
+.jersey-colors-tooltip.tstt-tooltip .tstt-pointer {
+	background-image: url("images/bubble-pointer.png");
+	height: 32px;
+	width: 16px;
+}
+
+.jersey-colors-tooltip td.colorsok {
+	text-align: center;
+}
+
+.jersey-colors-tooltip.tstt-tooltip th { font-weight: bold; }
+.jersey-colors-tooltip.tstt-tooltip td { vertical-align: top; }
+
+.jersey-colors-tooltip.tstt-tooltip th,
+.jersey-colors-tooltip.tstt-tooltip td
+{
+	width: auto;
+}
+
+.jersey-colors-tooltip.tstt-tooltip table { width: auto; }
+
+.jersey-colors-tooltip.tstt-tooltip label
+{
+	width: 14em;
+	height: 2.2em;
+	display: block;
+	zoom: 1;
+	margin-right: 1em;
+}
+.jersey-colors-tooltip.tstt-tooltip label select
+{
+	xfloat: right;
+	position: absolute;
+	width: 8em;
+	margin-left: 1em;
+}
+
+.jersey-colors-tooltip.tstt-tooltip td > div > div
+{
+	margin-left: 2em;
+}
+
+
+.jerseycolorsmall
+{
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	border: 1px solid #E1E1E1;
+	float: right;
+	margin-right: 6px;
+	cursor: pointer;
+	white-space: normal;
+}
+
+.jerseycolorsmall > .color
+{
+	display: inline-block;
+	height: 6px;
+}
+
+.jerseycolorsmall > .color-top
+{
+	width: 6px;
+}
+
+.jerseycolorsmall > .color-top.jersey-toponly
+{
+	height: 12px;
+}
+
+.jerseycolorsmall > .color-bottom
+{
+	width: 12px;
+}
+
+.jerseycolorsmall > .jerseyicons
+{
+	display: none;
+}
+
+.jerseyicons .jerseyicons-title,
+.jerseyicons .jerseyicons-homeaway
+{
+	color: #888;
+}
+
+.jerseyicons
+{
+	text-align: center;
+	font-size: 9px;
+	line-height: 5px;	/* this avoids restyling the icon widget. It has some padding that doesn't match the spec */
+	padding: 5px;
+}
+
+.shirtTop1, .shirtTop2 {
+	background-image: url("images/jersey_top_mask.png");
+	width: 7.5px;
+	height: 15px;
+	background-size: 15px 15px;
+	float: right;
+}
+
+.shirtTop2 {
+	background-position: -7.5px;
+}
+
+.shortBottom {
+	background-image: url("images/jersey_bottom_mask.png");
+	width: 15px;
+	height: 15px;
+	background-size: 15px 15px;
+	float: right;
+	margin-right: 5px;
+}
+
+.iconjerseys {
+	float: right;
+	min-width: 35px;
+	margin-right: 6px;
+	margin-left: 3px;
+}

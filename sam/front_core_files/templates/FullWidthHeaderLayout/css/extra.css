@@ -1,0 +1,14 @@
+/* Match the height and padding to the dimensions of the graphical links.  */
+a.bonzi_learnmore, a.bonzi_readmore {
+	height: 22px; 
+	width: 0px; 
+	text-decoration: none; 
+	display: inline-block; 
+	vertical-align: middle; 
+	overflow:hidden; 
+	padding-left: 127px; 
+} 
+a.bonzi_readmore { background-image: url("../../../../../cm/layout/images/read_more.png");} 
+a.bonzi_learnmore { background-image: url("../../../../../cm/layout/images/learn_more.png");} 
+
+

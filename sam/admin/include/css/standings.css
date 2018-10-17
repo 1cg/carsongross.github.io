@@ -1,0 +1,518 @@
+.standings-header, .stats-header
+{
+	display: block;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 20px;
+	clear: left;
+	margin-bottom: 10px;
+	margin-top: 30px;
+}
+
+.standings-subheader
+{
+	display: block;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+
+	.standings-subheader .ui-icon
+	{
+		display: inline-block;
+		vertical-align: top;
+	}
+
+.game-list-table
+{
+	width: 100%;
+	border-spacing: 0;
+}
+	.game-list-table td, .game-list-table tr
+	{
+		padding: 0;
+		margin: 0;
+		font-size: 11px;
+	}
+
+	.game-list-table .game-list-date
+	{
+		background-color: #E1E1E1;
+		font-size: 10px;
+		padding: 5px 15px;
+	}
+
+	.game-list-table .game-list-date-anchor
+	{
+		top: -5px;
+		left: -15px;
+		display: block;
+		position: relative;
+	}
+
+	.game-list-table .game-list-space-date
+	{
+		height: 6px;
+	}
+
+	.game-list-table .game-list-space-game-top
+	{
+		height: 2px;
+	}
+	.game-list-table .game-list-space-game-bottom
+	{
+		height: 2px;
+		border-bottom: 1px dotted #E1E1E1;
+	}
+
+	.game-list-table .game-list-space-day-bottom
+	{
+		height: 14px;
+	}
+
+	.game-list-table .game-list-left
+	{
+		padding: 4px;
+		width: 70px;
+		height: 38px;
+		text-align: center;
+		border-right: 3px double #E1E1E1;
+	}
+
+	.game-list-table .game-list-time
+	{
+		font-size: 14px;
+		display: block;
+		font-weight: bold;
+	}
+
+	.game-list-table .game-list-time.canceled
+	{
+		text-decoration: line-through;
+	}
+		.game-list-table .game-list-time-am
+		{
+			font-size: 11px;
+			padding-left: 2px;
+		}
+
+	.game-list-table .game-list-id
+	{
+		display: block;
+		color: #888;
+	}
+
+	.game-list-table .game-list-score
+	{
+		width: 21px;
+		padding-left: 15px;
+	}
+
+	.game-list-table .game-list-score-winner
+	{
+		font-weight: bold;
+		color: #CB3426;
+	}
+
+	.game-list-table .game-list-team-winner
+	{
+		font-weight: bold;
+	}
+
+	.game-list-table .game-list-game-report-link
+	{
+		text-transform: uppercase;
+		font-size: 8px;
+	}
+
+	.game-list-table .game-list-right
+	{
+		padding-left: 10px;
+		border-left: 3px double #E1E1E1;
+	}
+
+		.game-list-table .game-list-right-division, .game-list-table .game-list-right-location
+		{
+			display: block;
+		}
+
+		.game-list-table .game-list-right .ui-icon
+		{
+			display: inline-block;
+			vertical-align: top;
+		}
+
+	.game-list-table .game-list-score-entry,
+	.game-list-table .game-list-roster-edit
+	{
+		padding-left: 10px;
+		border-left: 3px double #E1E1E1;
+	}
+	.game-list-table .game-list-map
+	{
+		width: 40px;
+		padding-right: 5px;
+	}
+
+		.game-list-table .game-list-map-icon
+		{
+			vertical-align: middle;
+			width: 16px;
+			height: 22px;
+			margin-right: 5px;
+			display: inline-block;
+			background-image: url( "../../images/standings/map.png" );
+			background-repeat: no-repeat;
+		}
+
+	.game-list-table .game-list-team
+	{
+		height: 23px;
+	}
+
+		.game-list-table .game-list-team-home
+		{
+			margin-left: 5px;
+			width: 7px;
+			height: 7px;
+			display: inline-block;
+			background-image: url( "../../images/standings/home.png" );
+			background-repeat: no-repeat;
+		}
+
+		.game-list-table .game-list-team-public
+		{
+			margin-left: 3px;
+			width: 7px;
+			height: 7px;
+			display: inline-block;
+			background-image: url( "../../images/standings/public-team-page.png" );
+			background-repeat: no-repeat;
+		}
+
+	.game-list-table .game-list-row-top .game-list-score,
+	.game-list-table .game-list-row-top .game-list-team,
+	.game-list-table .game-list-row-top .game-list-game-report
+	{
+		border-bottom: 1px solid #E1E1E1;
+	}
+
+	.game-list-table a,
+	.game-list-table a:link,
+	.game-list-table a:active,
+	.game-list-table a:visited,
+	.standings-table a,
+	.standings-table a:link,
+	.standings-table a:active,
+	.standings-table a:visited
+	{
+		color: black;
+		text-decoration: underline;
+	}
+
+	.game-list-table .game-list-map a,
+	.game-list-table .game-list-map a:link,
+	.game-list-table .game-list-map a:active,
+	.game-list-table .game-list-map a:visited
+	{
+		text-transform: uppercase;
+		font-size: 8px;
+		cursor: pointer;
+		color: #888;
+	}
+
+.standings-table
+{
+	width: 100%;
+	border-spacing: 0;
+	margin-bottom: 20px;
+}
+	.standings-table thead th
+	{
+		background-color: #E1E1E1;
+		font-size: 10px;
+		padding: 5px 5px 5px 0;
+		font-weight: normal;
+		text-align: left;
+	}
+
+	.standings-table tbody td
+	{
+		border-bottom: 1px dotted #E1E1E1;
+		padding: 8px 8px 8px 0;
+	}
+
+.standings-table td:first-child, .standings-table th:first-child
+{
+	padding-left: 15px;
+	width: 45%;
+}
+
+.dstable-wrapper
+{
+	border-top: 1px solid #E1E1E1;
+	border-bottom: 1px solid #E1E1E1;
+}
+
+#ui-datepicker-div
+{
+	display: none;
+}
+
+.path-header
+{
+	display: block;
+	font-size: 14px;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 25px;
+	float: left;
+}
+
+	.path-header.bonzi-breadcrumb
+	{
+		border: 1px solid #E1E1E1;
+		background-image: url( "../../images/standings/1x50_gray_gradient.png" );
+		height: 40px;
+	}
+
+	.path-header.bonzi-breadcrumb li
+	{
+		background-position: right top;
+		height: 40px
+	}
+
+	.path-header > li
+	{
+		list-style: none;
+	}
+
+	.path-header.bonzi-breadcrumb > li
+	{
+		padding: 11px 20px 11px 8px;
+		cursor: default;
+		text-decoration: none;
+	}
+
+.dscroll-container
+{
+	margin-bottom: 20px;
+}
+
+	.dscroll-scroll-button
+	{
+		border: 1px solid #E1E1E1;
+		cursor: pointer;
+	}
+
+		.dscroll-scroll-button.dscroll-disabled
+		{
+			cursor: default;
+		}
+
+		.dscroll-left-button
+		{
+			-webkit-border-top-left-radius: 5px;
+			-webkit-border-bottom-left-radius: 5px;
+			-moz-border-radius-topleft: 5px;
+			-moz-border-radius-bottomleft: 5px;
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px;
+		}
+
+		.dscroll-right-button
+		{
+			-webkit-border-top-right-radius: 5px;
+			-webkit-border-bottom-right-radius: 5px;
+			-moz-border-radius-topright: 5px;
+			-moz-border-radius-bottomright: 5px;
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 5px;
+		}
+
+			.dscroll-right-button-icon, .dscroll-left-button-icon
+			{
+				display: block;
+				width: 7px;
+				height: 9px;
+				margin-left: 6px;
+				margin-top: 15px;
+				background-repeat: no-repeat;
+			}
+
+			.dscroll-scroll-button:hover .dscroll-right-button-icon, .dscroll-scroll-button:hover .dscroll-left-button-icon
+			{
+				background-position: 0 -9px;
+			}
+
+			.dscroll-scroll-button.dscroll-disabled .dscroll-right-button-icon, .dscroll-scroll-button.dscroll-disabled .dscroll-left-button-icon
+			{
+				background-position: 0 0;
+			}
+
+			.dscroll-left-button-icon
+			{
+				background-image: url( "../../images/standings/left.png" );
+			}
+
+			.dscroll-right-button-icon
+			{
+				background-image: url( "../../images/standings/right.png" );
+			}
+
+	.dscroll-container .dscroll-day
+	{
+		z-index: 1;
+
+		border: 1px solid #E1E1E1;
+		width: 66px;
+		cursor: pointer;
+
+		font-size: 9px;
+	}
+
+		.dscroll-container .dscroll-selected
+		{
+			background-color: #E1E1E1;
+			z-index: 1;
+		}
+
+		.dscroll-container .dscroll-selected:after
+		{
+			display: block;
+			position: absolute;
+			width: 16px;
+			height: 7px;
+			margin-left: -8px;
+			left: 50%;
+			bottom: -1px;
+			background-image: url( "../../images/standings/white-up-triangle.png" );
+			content: " ";
+		}
+
+		.dscroll-container .dscroll-today
+		{
+			border: 1px solid #CB3426;
+			z-index: 3;
+		}
+
+			.dscroll-container .dscroll-selected.dscroll-today
+			{
+				border-bottom: none;
+			}
+
+		.dscroll-container .dscroll-disabled
+		{
+			opacity: 0.3;
+			cursor: default;
+		}
+
+	.dscroll-calendar
+	{
+		cursor: pointer;
+	}
+
+	.dscroll-calendar .dscroll-calendar-icon
+	{
+		display: block;
+		width: 40px;
+		height: 30px;
+		margin-top: 5px;
+		background-image: url( "../../images/standings/datepicker.png" );
+		background-repeat: no-repeat;
+	}
+
+		.dscroll-calendar:hover .dscroll-calendar-icon
+		{
+			background-position: 0 -30px;
+		}
+
+.standings-action-icon
+{
+	cursor: pointer;
+	float: right;
+	width: 18px;
+	height: 17px;
+	background-repeat: no-repeat;
+	margin-left: 3px;
+}
+
+	.standings-action-icon:hover
+	{
+		background-position: 0 -17px;
+	}
+
+	.standings-print-icon
+	{
+		background-image: url( "../../images/standings/print.png" );
+	}
+
+	.standings-download-icon
+	{
+		background-image: url( "../../images/standings/download.png" );
+	}
+
+
+.jerseycolorsmall
+{
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	border: 1px solid #E1E1E1;
+	float: right;
+	margin-right: 6px;
+	cursor: pointer;
+	margin-left: 3px;
+}
+
+.jerseycolorsmall > .color
+{
+	display: inline-block;
+	height: 6px;
+}
+
+.jerseycolorsmall > .color-top
+{
+	width: 6px;
+}
+
+.jerseycolorsmall > .color-top.jersey-toponly
+{
+	height: 12px;
+}
+
+.jerseycolorsmall > .color-bottom
+{
+	width: 12px;
+}
+
+.jerseycolorsmall > .jerseyicons
+{
+	display: none;
+}
+
+.jerseyicons .jerseyicons-title,
+.jerseyicons .jerseyicons-homeaway
+{
+	color: #888;
+}
+
+.jerseyicons
+{
+	text-align: center;
+	font-size: 9px;
+	line-height: 5px;	/* this avoids restyling the icon widget. It has some padding that doesn't match the spec */
+	padding: 5px;
+}
+
+.sponsorLogoWrap {
+	float: right;
+}
+
+.sponsorLogoWrap img.sponsorLogo {
+	max-height: 70px;
+	max-width: 540px;
+}
+
+.clear {
+	clear: both;
+}

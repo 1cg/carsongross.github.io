@@ -1,0 +1,153 @@
+.dscroll-container
+{
+	/* no select */
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	cursor: default;
+}
+
+	.dscroll-calendar
+	{
+		position: relative;
+		height: 40px;
+		width: 50px;
+		float: left;
+	}
+
+		.dscroll-calendar-icon
+		{
+			vertical-align: top;
+			display: inline-block;
+			width: 28px;
+			height: 30px;
+			margin-top: 4px;
+			margin-left: 4px;
+			background: url( "jquery.ui.datescroller/calendar.png" ) no-repeat;
+		}
+
+		.dscroll-calendar .ui-icon
+		{
+			vertical-align: top;
+			display: inline-block;
+			margin-top: 13px;
+		}
+
+		.dscroll-datepicker
+		{
+			position: absolute;
+			top: 35px;
+			left: 35px;
+			z-index: 10;
+		}
+
+			.ui-widget .dscroll-datepicker
+			{
+				z-index: 4;
+			}
+
+	.dscroll-scroller
+	{
+		float: left;
+		padding: 0 0 0 8px;
+	}
+
+		.dscroll-scroll-button
+		{
+			float: left;
+			height: 40px;
+			width: 20px;
+		}
+
+		.dscroll-scroll-button .ui-icon
+		{
+			margin-top: 10px;
+			margin-left: 1px;
+		}
+
+		.dscroll-left-button
+		{
+			margin-right: 1px;
+		}
+
+		.dscroll-right-button
+		{
+			margin-left: 1px;
+		}
+
+		.dscroll-days
+		{
+			position: relative;
+			float: left;
+			overflow: hidden;
+			height: 42px;
+		}
+
+			.dscroll-days-wrapper
+			{
+				position: relative;
+				height: 42px;
+				white-space: nowrap;
+			}
+
+				.dscroll-day
+				{
+					position: relative;
+					display: inline-block;
+
+					padding: 0 5px;
+
+					height: 40px;
+					width: 62px;
+
+					white-space: normal;
+					vertical-align: top;
+
+					font-size: 8px;
+					line-height: 100%;
+					text-align: center;
+				}
+
+					.dscroll-day ~ .dscroll-day
+					{
+						margin-left: -1px;
+					}
+
+					.ui-widget .dscroll-day.dscroll-selected
+					{
+						z-index: 4;
+					}
+
+					.ui-widget .dscroll-day.dscroll-today
+					{
+						z-index: 1;
+					}
+
+					.ui-widget .dscroll-day:hover
+					{
+						z-index: 3;
+					}
+
+					.dscroll-date
+					{
+						display: block;
+						margin-top: 7px;
+
+						text-transform: uppercase;
+						font-weight: bold;
+					}
+
+						.dscroll-date-with-year
+						{
+							margin-top: 4px;
+						}
+
+					.dscroll-events
+					{
+						display: block;
+						margin-top: 3px;
+					}

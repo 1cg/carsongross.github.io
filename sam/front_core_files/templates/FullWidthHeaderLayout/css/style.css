@@ -1,0 +1,528 @@
+/* << ----------------// General Styles //---------------->> */
+
+body {
+margin:10px 0 10px 0;
+padding:0;
+font-family: Arial, Helvetica, sans-serif;
+font-size:12px;
+line-height:18px;
+color:#000000;
+background:url("../../../../../cm/layout/images/bg.png");
+}
+
+html, address,
+blockquote,
+body, dd, div,
+dl, dt, fieldset, form,
+frame, frameset,
+h1, h2, h3, h4,
+h5, h6, noframes,
+ol, p, ul, center,
+dir, hr, menu, pre   { display: block; }
+li              { display: list-item; }
+head            { display: none; }
+table           { display: table; }
+tr              { display: table-row; }
+thead           { display: table-header-group; }
+tbody           { display: table-row-group; }
+tfoot           { display: table-footer-group; }
+col             { display: table-column; }
+colgroup        { display: table-column-group; }
+td, th          { display: table-cell; }
+caption         { display: table-caption; }
+th              { font-weight: bolder; text-align: center; }
+caption         { text-align: center; }
+body            { margin: 8px; }
+h1              { font-size: 2em; margin: .67em 0; }
+h2              { font-size: 1.5em; margin: .75em 0; }
+h3              { font-size: 1.17em; margin: .83em 0; }
+h4, p,
+blockquote, ul,
+fieldset, form,
+ol, dl, dir,
+menu            { margin: 1.12em 0; }
+h5              { font-size: .83em; margin: 1.5em 0; }
+h6              { font-size: .75em; margin: 1.67em 0; }
+h1, h2, h3, h4,
+h5, h6, b,
+strong          { font-weight: bolder; }
+blockquote      { margin-left: 40px; margin-right: 40px; }
+i, cite, em,
+var, address    { font-style: italic; }
+pre, tt, code,
+kbd, samp       { font-family: monospace; }
+pre             { white-space: pre; }
+button, textarea,
+input, select   { display: inline-block; }
+big             { font-size: 1.17em; }
+small, sub, sup { font-size: .83em; }
+sub             { vertical-align: sub; }
+sup             { vertical-align: super; }
+s, strike, del  { text-decoration: line-through; }
+hr              { border: 1px inset; }
+ol, ul, dir,
+menu, dd        { margin-left: 40px; }
+ol              { list-style-type: decimal; }
+ol ul, ul ol,
+ul ul, ol ol    { margin-top: 0; margin-bottom: 0; }
+u, ins          { text-decoration: underline; }
+br:before       { content: "\A"; white-space: pre-line; }
+:link, :visited { text-decoration: underline; }
+:focus          { outline: none; }
+
+/* Begin bidirectionality settings (do not change) */
+BDO[DIR="ltr"]  { direction: ltr; unicode-bidi: bidi-override; }
+BDO[DIR="rtl"]  { direction: rtl; unicode-bidi: bidi-override; }
+
+*[DIR="ltr"]    { direction: ltr; unicode-bidi: embed; }
+*[DIR="rtl"]    { direction: rtl; unicode-bidi: embed; }
+
+@media print {
+  h1            { page-break-before: always; }
+  h1, h2, h3,
+  h4, h5, h6    { page-break-after: avoid; }
+  ul, ol, dl    { page-break-before: avoid; }
+}
+
+a:link          { color:#000000; text-decoration:underline; }
+a:visited       { color:#333333; text-decoration:underline; }
+a:hover         { color:#000000; text-decoration:none; }
+a:active        { color:#000000; text-decoration:underline; }
+
+/* << ----------------// Outer container that holds all the columns //---------------->> */
+
+.mainContainer {
+margin:0 auto;
+padding:0;
+width:1000px;
+position:relative;
+}
+
+
+/* << ----------------// Header //---------------->> */
+
+.header {
+height:150px;
+background:url("../../../../../cm/layout/images/header.png");
+position:relative;
+margin:0 auto;
+padding:0;
+}
+
+.header_home_link {
+width:1000px;
+height:150px;
+float:left;
+}
+
+.hdr_name {display:none;}
+
+.member_login {
+display:block;
+position:absolute;
+top:150px;
+left:0px;
+height:40px;
+width:200px;
+}
+
+/* << ----------------// Body //---------------->> */
+
+.content_bg {
+background:url("../../../../../cm/layout/images/content_bg.png");
+background-color:#FFF;
+width:1000px;
+clear:both;
+}
+
+
+/* << ----------------// Vertical navigation //---------------->> */
+.v_nav_top {
+height: 25px;
+width:200px;
+background:url("../../../../../cm/layout/images/v_nav_top.png");
+display:none;
+}
+
+.v_nav_btm {
+height: 25px;
+width:200px;
+background:url("../../../../../cm/layout/images/v_nav_btm.png");
+display:none;
+}
+
+/* Front Menu Global Styles */
+
+.nav {
+  margin:0 0 10px 0;
+}
+
+ul.cssMenu,
+ul.cssMenu ul{
+  list-style: none;
+  list-style-position: outside;    /* IE decides to disregard list-style: none, so this is needed to override sam_default.css */
+  margin: 0;
+  padding: 0;
+}
+
+ul.cssMenu ul{
+  display: none;
+  position: absolute;
+  margin-right: 0;
+  z-index: 400;
+}
+
+/* style for all buttons */
+ul.cssMenu li{
+  margin: 0;
+  padding: 0;
+  border: none;
+  float: left;
+  background-image: url("../../../../../cm/layout/images/v_nav_up.png");
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 20px;
+  font-size: 12px;
+  line-height: 20px;
+  text-indent:10px;
+  text-align: left;
+  position: relative;
+  background-color: transparent;
+  cursor: default;
+  z-index: 750;
+}
+
+ul.cssMenu li .button-text {
+  background-color: transparent;
+  display: block;
+  font-size: 12px;
+}
+
+ul.cssMenu li a:hover,
+ul.cssMenu li.over .button-text {
+  color: inherit;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: inherit;
+}
+
+ul.cssMenu li a{
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
+
+ul.cssMenu li:hover,
+ul.cssMenu li.over{
+  background-color: transparent;
+  background-image: url("../../../../../cm/layout/images/v_nav_ovr.png");
+  background-repeat: no-repeat;
+}
+
+ul.cssMenu:after{
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+/* style for buttons in a sub menu */
+ul.cssMenu li li{
+  background-image: none;
+  border: none;
+  background-color: #ddd;
+  z-index: 1000;
+  top:2px;
+}
+
+ul.cssMenu li li:hover,
+ul.cssMenu li li.over{
+  background-image: none;
+  background-color: #ccc;
+}
+
+ul.cssMenu ul li{
+  display: block;
+}
+
+/*
+* Hide sub menus that are not hovered over.
+* It only works for 5 levels deep.  If for some reason you need
+* more, add more here
+*/
+ul.cssMenu ul,
+ul.cssMenu li.over ul ul,
+ul.cssMenu li.over li.over ul ul,
+ul.cssMenu li.over li.over li.over ul ul,
+.no-touch ul.cssMenu li:hover ul ul,
+.no-touch ul.cssMenu li:hover li:hover ul ul,
+.no-touch ul.cssMenu li:hover li:hover li:hover ul ul{
+ display: none;
+}
+
+/* show hovered submenus */
+ul.cssMenu li.over ul,
+ul.cssMenu li.over li.over ul,
+ul.cssMenu li.over li.over li.over ul,
+ul.cssMenu li.over li.over li.over li.over ul,
+.no-touch ul.cssMenu li:hover ul,
+.no-touch ul.cssMenu li:hover li:hover ul,
+.no-touch ul.cssMenu li:hover li:hover li:hover ul,
+.no-touch ul.cssMenu li:hover li:hover li:hover li:hover ul{
+  display: block;
+}
+
+/* RIGHT type menus */
+
+ul.cmRight span.buttonArrow {
+  float: right;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  background-position: 0 0;
+}
+
+ul.cmRight li{
+  float: none;
+}
+
+ul.cmRight li ul,
+ul.cmRight li ul li ul{
+  left: 200px;
+  top: -2px;
+}
+
+
+/* << ----------------// Left column //---------------->> */
+
+.col_left {
+float:left;
+margin:0 0 0 0;
+width:200px;
+height:100%;
+}
+
+.col_left_top {
+height: 40px;
+width:200px;
+background:url("../../../../../cm/layout/images/col_left_top.png");
+}
+
+.col_left p, .col_right p, .col_left ul li, .col_left ol li, .col_right ul li, .col_right ol li {
+font-size:13px;
+}
+
+.col_left h2, .col_right h2 {
+font-size:16px;
+}
+
+/* << ----------------// Top (full width) area (full-width)  //---------------->> */
+
+.fullwidthcontainer .top, .fullwidthcontainer .right, .fullwidthcontainer .mid, .fullwidthcontainer .bottom, .fullwidthcontainer .content { padding: 0; margin: 0; border: none; }
+
+.fullwidthcontainer .wgt_container { margin: 0 0 10px 0; }
+.fullwidthcontainer .content { margin-left: 20px; margin-right: 20px; background-color:#FFF; }
+.fullwidthcontainer .bottom .content, .fullwidthcontainer .top .content { font-weight: bold; font-size: 11px; text-align: left; line-height:20px; }
+
+.fullwidthcontainer .top, .fullwidthcontainer .mid, .fullwidthcontainer .bottom { width: 100%; }
+.fullwidthcontainer .right { width: 100%; }
+.fullwidthcontainer .top, .fullwidthcontainer .top .content, .fullwidthcontainer .bottom, .fullwidthcontainer .bottom .content { height: 20px; }
+
+/* Note: Defaults to using col_ctr images */
+.fullwidthcontainer .top { background:url("../../../../../cm/layout/images/wgt_col_ctr_top_left.png") no-repeat left top; }
+.fullwidthcontainer .top .right { background:url("../../../../../cm/layout/images/wgt_col_ctr_top_right.png") no-repeat right top; }
+.fullwidthcontainer .top .content { background:url("../../../../../cm/layout/images/wgt_col_ctr_top_ctr.png") repeat-x top; }
+
+.fullwidthcontainer .mid { background:url("../../../../../cm/layout/images/wgt_col_ctr_mid_left.png") repeat-y left; }
+.fullwidthcontainer .mid .right { background:url("../../../../../cm/layout/images/wgt_col_ctr_mid_right.png") repeat-y right; }
+.fullwidthcontainer .mid .content { background:url("../../../../../cm/layout/images/wgt_col_ctr_mid_ctr.png"); padding:5px 0 5px 0; }
+
+.fullwidthcontainer .bottom { background:url("../../../../../cm/layout/images/wgt_col_ctr_btm_left.png") no-repeat left bottom; }
+.fullwidthcontainer .bottom .right { background:url("../../../../../cm/layout/images/wgt_col_ctr_btm_right.png") no-repeat right bottom; }
+.fullwidthcontainer .bottom .content { background:url("../../../../../cm/layout/images/wgt_col_ctr_btm_ctr.png") repeat-x bottom; }
+
+
+/* << ----------------// Left widget //---------------->> */
+
+.col_left .top, .col_left .right, .col_left .mid, .col_left .bottom, .col_left .content { padding: 0; margin: 0; border: none; }
+
+.col_left .wgt_container { width: 190px; margin: 0 0 10px 0; }
+.col_left .content { margin-left: 10px; margin-right: 10px; background-color:#FFF; }
+.col_left .bottom .content, .col_left .top .content { color: #FFF; font-weight: bold; font-size: 11px; text-align: left; line-height:20px; }
+
+.col_left .top, .col_left .mid, .col_left .bottom { width: 100%; }
+.col_left .right { width: 100%; }
+.col_left .top, .col_left .top .content, .col_left .bottom, .col_left .bottom .content { height: 20px; }
+
+.col_left .top { background:url("../../../../../cm/layout/images/wgt_col_left_top_left.png") no-repeat left top; }
+.col_left .top .right { background:url("../../../../../cm/layout/images/wgt_col_left_top_right.png") no-repeat right top; }
+.col_left .top .content { background:url("../../../../../cm/layout/images/wgt_col_left_top_ctr.png") repeat-x top; }
+
+.col_left .mid { background:url("../../../../../cm/layout/images/wgt_col_left_mid_left.png") repeat-y left; }
+.col_left .mid .right { background:url("../../../../../cm/layout/images/wgt_col_left_mid_right.png") repeat-y right; }
+.col_left .mid .content { background:url("../../../../../cm/layout/images/wgt_col_left_mid_ctr.png"); padding:5px 0 5px 0; }
+
+.col_left .bottom { background:url("../../../../../cm/layout/images/wgt_col_left_btm_left.png") no-repeat left bottom; }
+.col_left .bottom .right { background:url("../../../../../cm/layout/images/wgt_col_left_btm_right.png") no-repeat right bottom; }
+.col_left .bottom .content { background:url("../../../../../cm/layout/images/wgt_col_left_btm_ctr.png") repeat-x bottom; }
+
+
+/* << ----------------// Center column //---------------->> */
+
+.col_ctr {
+float:left;
+margin:0 0 0 0;
+padding:0 0 0 0;
+width:600px;
+}
+
+.col_ctr_top {
+height: 40px;
+width:100%;
+background:url("../../../../../cm/layout/images/col_ctr_top.png");
+}
+
+
+/* << ----------------// Center widget //---------------->> */
+
+.col_ctr .top, .col_ctr .right, .col_ctr .mid, .col_ctr .bottom, .col_ctr .content { padding: 0; margin: 0; border: none; }
+
+.col_ctr .wgt_container { width: 590px; margin: 0 5px 10px 5px; }
+.col_ctr .content { margin-left: 20px; margin-right: 20px; background-color:#FFF; }
+.col_ctr .bottom .content, .col_ctr .top .content { color: #FFF; font-weight: bold; font-size: 12px; text-align: left; }
+
+.col_ctr .top, .col_ctr .mid,.bottom { width: 100%; }
+.col_ctr .right { width: 100%; }
+.col_ctr .top, .col_ctr .top .content, .col_ctr .bottom, .col_ctr .bottom .content { height: 20px; }
+
+.col_ctr .top { background:url("../../../../../cm/layout/images/wgt_col_ctr_top_left.png") no-repeat left top; }
+.col_ctr .top .right { background:url("../../../../../cm/layout/images/wgt_col_ctr_top_right.png") no-repeat right top; }
+.col_ctr .top .content { background:url("../../../../../cm/layout/images/wgt_col_ctr_top_ctr.png") repeat-x top; }
+
+.col_ctr .mid { background:url("../../../../../cm/layout/images/wgt_col_ctr_mid_left.png") repeat-y left; }
+.col_ctr .mid .right { background:url("../../../../../cm/layout/images/wgt_col_ctr_mid_right.png") repeat-y right; }
+.col_ctr .mid .content { background:url("../../../../../cm/layout/images/wgt_col_ctr_mid_ctr.png"); padding:5px 0 5px 0; }
+
+.col_ctr .bottom { background:url("../../../../../cm/layout/images/wgt_col_ctr_btm_left.png") no-repeat left bottom; }
+.col_ctr .bottom .right { background:url("../../../../../cm/layout/images/wgt_col_ctr_btm_right.png") no-repeat right bottom; }
+.col_ctr .bottom .content { background:url("../../../../../cm/layout/images/wgt_col_ctr_btm_ctr.png") repeat-x bottom;}
+
+
+/* << ----------------// Right column //---------------->> */
+
+.col_right {
+float:left;
+margin:0 0 0 0;
+padding:0px 0px 0px 0px;
+width:200px;
+}
+
+.col_right_top {
+height: 40px;
+width:200px;
+background:url("../../../../../cm/layout/images/col_right_top.png");
+}
+
+
+/* << ----------------// Right widget //---------------->> */
+
+.col_right .top, .col_right .right, .col_right .mid, .col_right .bottom, .col_right .content { padding: 0; margin: 0; border: none; }
+
+.col_right .wgt_container { width: 190px; margin: 0 0 10px 0; }
+.col_right .content { margin-left: 10px; margin-right: 10px; background-color:#FFF; }
+.col_right .bottom .content, .col_right .top .content { color: #FFF; font-weight: bold; font-size: 11px; text-align: left; line-height:20px; }
+
+.col_right .top, .col_right .mid, .col_right .bottom { width: 100%; }
+.col_right .right { width: 100%; }
+.col_right .top, .col_right .top .content, .col_right .bottom, .col_right .bottom .content { height: 20px; }
+
+.col_right .top { background:url("../../../../../cm/layout/images/wgt_col_right_top_left.png") no-repeat left top; }
+.col_right .top .right { background:url("../../../../../cm/layout/images/wgt_col_right_top_right.png") no-repeat right top; }
+.col_right .top .content { background:url("../../../../../cm/layout/images/wgt_col_right_top_ctr.png") repeat-x top; }
+
+.col_right .mid { background:url("../../../../../cm/layout/images/wgt_col_right_mid_left.png") repeat-y left; }
+.col_right .mid .right { background:url("../../../../../cm/layout/images/wgt_col_right_mid_right.png") repeat-y right; }
+.col_right .mid .content { background:url("../../../../../cm/layout/images/wgt_col_right_mid_ctr.png"); padding:5px 0 5px 0; }
+
+.col_right .bottom { background:url("../../../../../cm/layout/images/wgt_col_right_btm_left.png") no-repeat left bottom; }
+.col_right .bottom .right { background:url("../../../../../cm/layout/images/wgt_col_right_btm_right.png") no-repeat right bottom; }
+.col_right .bottom .content { background:url("../../../../../cm/layout/images/wgt_col_right_btm_ctr.png") repeat-x bottom; }
+
+
+/* << ----------------// Footer //---------------->> */
+
+.footer {
+position:relative;
+margin:0 auto;
+padding:0;
+height:55px;
+font-size:10px;
+color:#FFFFFF;
+background:url("../../../../../cm/layout/images/footer.png");
+clear:both;
+}
+
+.footer a:link          { color:#FFF; text-decoration:none; }
+.footer a:visited       { color:#FFF; text-decoration:none; }
+.footer a:hover         { color:#FFF; text-decoration:underline; }
+.footer a:active        { color:#FFF; text-decoration:none; }
+
+/* << ----------------// New logo in footer replacement //---------------->> */
+
+.bonzi_logo a {
+	background: transparent url(https://assets.connect.stacksports.com/memberhome_footer-logo.png) no-repeat top left !important;
+  background-size: contain !important;
+	padding-top: 0px;
+	height: 52px;
+	width: 111px;
+	display: inline-block;
+}
+
+.bonzi_logo a img {
+	display: none !important;
+}
+
+/* << ----------------// Fix so that the outer DIV will wrap around all floated DIVs within //---------------->> */
+
+.clearfix:after {
+content: ".";
+display: block;
+height: 0;
+clear: both;
+visibility: hidden;
+}
+
+.clearfix {display: inline-table;}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+
+
+/* << ----------------// TRINKET STYLES //---------------->> */
+
+/* << ----------------// RSS / Twitter Feed Widget //---------------->> */
+
+.RT_RssFeed .date { font-size: .75em; font-style: italic; display: block; }
+
+.RT_RssFeed .item {
+padding-bottom: 8px;
+margin-bottom: 8px;
+}
+
+.RT_RssFeed {
+margin-left:0px;
+list-style:none;
+}
+
+.RT_RssFeed h3 {
+font-size:13px;
+}
+
+
+/* << ----------------// AD BANNERS //---------------->> */
+
+.sam_ad_banner > div {margin:0 auto; padding:10px;}

@@ -1,0 +1,313 @@
+/* << ----------------// Style Overrides - Use .layout_three_column or .layout_left_column to restrict changes to single layout //---------------->> */
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+/* << ----------------// General Styles //---------------->> */
+html {
+	margin:0;
+	background-image:url("../images/bg_site.jpg");
+	background-size: auto;
+    background-attachment: scroll;
+    background-position: center 0px;
+    background-repeat: no-repeat;
+    background-color: #d2a67c;
+}
+
+body {margin:0; background: transparent;}
+
+.content_bg {min-height:200px; margin:0 auto;}
+
+.layout_threecolumn .content_bg,
+.layout_leftcolumn .content_bg,
+.layout_rightcolumn .content_bg,
+.layout_singlecolumn .content_bg {background:transparent;}
+
+/* << ----------------// Header //---------------->> */
+
+.header {
+	height:263px; /* height of header.png */
+	width:1000px;
+	margin:0 auto;
+}
+
+.header_home_link {
+	height:195px; /* usually height of header.png */
+	width:1000px;
+	display:block;
+	top:0px;
+	left:0px;
+	z-index:5;
+}
+
+.member_login {
+	position:absolute;
+	top:5px; /* height of header.png */
+	left:850px;
+	height:40px; /* half height of whatever graphic contains log in button */
+	width:150px;
+	background-image:url("../images/member_login.png");
+	z-index:10;
+}
+
+
+
+/* << ----------------// Left column //---------------->> */
+.col_left_top {
+	display:block;
+	height:15px;
+}
+
+.col_left {min-height:1px;}
+
+.col_left .top, .col_left .top .content {
+	height: 40px; 
+	line-height:38px; 
+	text-indent:0px; 
+	font-family: 'open sans', Arial, sans-serif;
+    font-size: 18px;
+    color: #b7b7b7;
+	font-weight:400; 
+}
+
+.col_left .bottom, .col_left .bottom .content { height:10px; }
+
+.col_left .wgt_container {width:195px; margin: 0 5px 10px 0px;}
+
+
+/* << ----------------// Vertical navigation //---------------->> */
+.nav { margin:0;}
+.v_nav_top {height:0px; display:none;}
+.v_nav_btm {height:0px; display:none;}
+.nav {margin:0;}
+
+/* style for all buttons */
+.col_left > ul.cssMenu {margin-bottom:15px;}
+
+ul.cssMenu li{
+  height: 25px;
+  line-height: 25px;
+  text-indent:10px;
+  color:#777777;
+  font-family: 'Oswald', sans-serif;
+}
+
+ul.cssMenu li .button-text {
+  font-weight:400;
+  font-size:11px;
+}
+
+ul.cssMenu li:hover > a,
+ul.cssMenu li.over > a.button-text {
+  font-weight:400;
+  font-size:11px;
+  color: #B22222;
+}
+
+ul.cssMenu li:hover,
+ul.cssMenu li.over {
+background-image:transparent;
+}
+
+/* style for buttons in a sub menu */
+ul.cssMenu li li{
+  background-color:#E9EAEE;
+  top:2px;
+  height:25px;
+  line-height:25px;
+  text-indent:10px;
+}
+
+ul.cssMenu li li .button-text {color:#5A5A5A;}
+
+ul.cssMenu li li:hover,
+ul.cssMenu li li.over{
+  background:#E9EAEE;
+}
+
+ul.cssMenu li li:hover > a,
+ul.cssMenu li li.over > a.button-text {
+   color:#B22222;
+}
+
+
+
+/* << ----------------// Horizontal Nav //---------------->> */
+
+.hnav {position:absolute; width:100%; top:218px; height:36px;}
+.hmenu {width:1000px; margin: 0 auto; }
+
+.hmenu .v_nav_top,
+.hmenu .v_nav_btm {display:none;}
+
+.hmenu ul.cssMenu li {
+	background-color: #1d3261;
+	width:auto; 
+	height: 36px;
+	text-indent:0px;
+	line-height:34px;
+	margin-top:0px;
+	font-family: 'open sans', Arial, sans-serif;
+    color: #ffffff;
+	padding-right:24px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+	border-right: 1px solid rgba(181, 174, 174, 0.25);
+}
+
+.hmenu ul.cssMenu li .button-text {
+	font-weight:400;
+	font-size: 12px;
+	padding-left:6px;
+	
+}
+
+.hmenu ul.cssMenu li:hover > a,
+.hmenu ul.cssMenu li.over > a.button-text {
+	font-weight:400;
+	font-size: 12px;
+	color:#363636;
+}
+
+.hmenu ul.cssMenu li:hover,
+.hmenu ul.cssMenu li.over {
+	background:#FFF;
+}
+
+/* sub menu */
+.hmenu ul.cssMenu ul {margin-top:0px;}
+
+.hmenu ul.cssMenu li li{
+	background:#1F315F; /* subnavigation item up color */
+	top:0px; /* subnavigation item top alignment to main menu item */
+	height:35px; /* height of subnavigation item */ 
+	line-height:30px; /* vertical text alignment of subnavigation item */
+	margin-bottom:0px;	
+	margin-top:0px;
+	width:200px;
+	text-indent:0px;
+	text-transform:none;
+	border:none;
+	font-size:12px;
+}
+
+.hmenu ul.cssMenu li li .button-text {
+  margin-top:0px;
+  color: #FFF;
+  font-size:12px;
+}
+
+.hmenu ul.cssMenu li li:hover,
+.hmenu ul.cssMenu li li.over{ 
+	background:#FFF;
+}
+
+.hmenu ul.cssMenu li li:hover > a,
+.hmenu ul.cssMenu li li.over > a.button-text { 
+	color:#363636; /* text color, needed on sam system */  
+	font-size:12px;
+}
+
+.hmenu ul.cssMenu li li ul {
+top:-15px;
+left:224px;
+}
+
+.hmenu ul.cssMenu .cmDown {padding:0 0 5px; margin-top:15px;}
+
+/* << ----------------// Center column //---------------->> */
+
+.col_ctr_top {
+	display:block;
+	height:15px;
+}
+
+/* << ----------------// Center widget //---------------->> */
+
+.col_ctr .top .content {
+	font-family: 'open sans', Arial, sans-serif;
+    font-size: 20px;
+    color: #b7b7b7; 
+	font-weight:400; 
+	text-align: left; 
+	line-height:38px; 
+	text-indent:0px;
+} 
+
+.col_ctr .top, .col_ctr .top .content { height: 40px; } /* center widget top height */
+
+.col_ctr .bottom, .col_ctr .bottom .content { height: 10px; } /* center widget bottom height */
+
+.layout_threecolumn  .col_ctr .wgt_container {width:590px; margin:0 auto 10px;} 
+.layout_leftcolumn .col_ctr .wgt_container {width:795px; margin:0 0px 10px 5px;}
+.layout_rightcolumn .col_ctr .wgt_container  {width:795px; margin:0 5px 10px 0;}
+.layout_singlecolumn .col_ctr .wgt_container {width:1000px; margin:0 auto 10px;}
+
+/* << ----------------// Right column //---------------->> */
+
+.col_right_top {
+	display:block;
+	height:15px;
+}
+
+.col_right {min-height:1px;}
+
+.col_right .top, .col_right .top .content {
+	height: 40px; 
+	line-height:38px; 
+	text-indent:0px; 
+	font-family: 'open sans', Arial, sans-serif;
+    font-size: 18px;
+    color: #b7b7b7;
+	font-weight:400; 
+}
+.col_right .bottom, .col_right .bottom .content { height:10px; }
+
+.col_right .wgt_container {width:195px; margin: 0 0 10px 5px;}
+
+
+/* << ----------------// Footer //---------------->> */
+.footer { height:70px; width:1000px; margin:0 auto; }
+
+.footer .wgt_container {width:1000px; margin:0 auto;}
+
+.bonzi_logo img {background-image:url("../../../sam/front_core_files/templates/Style1Layout/images/bonzi_logo_dark.png");}
+
+.bonzi_logo {padding-top:8px;}
+
+.footer_content  {color:#888; width:700px; padding-top:11px;}
+.footer_content a:link  {color:#888;}
+.footer_content a:visited {color:#888;}
+.footer_content a:hover {color:#888;}
+.footer_content a:active {color:#888;}
+
+a.bonzi_learnmore, a.bonzi_readmore, a.bonzi_moreinfo, a.bonzi_registernow {
+height: 25px !important; 
+padding-left:120px !important;
+}
+
+ /*<< ----------------// Full Width Container //---------------->> */
+.fullwidthcontainer {
+   background:transparent; width:1000px; margin: 0 auto;      
+}
+
+.fullwidthcontainer > div {
+	margin:0 auto;
+	width:1000px;
+}
+
+.fullwidthcontainer .wgt_container {width:1000px; padding-top:0px; margin:0 auto; padding-top:15px;}
+
+.fullwidthcontainer .wgt_container .content {margin-left:20px; margin-right:20px;}
+
+.fullwidthcontainer .bottom, .fullwidthcontainer .bottom .content {height: 15px;}
+
+.fullwidthcontainer .top, .fullwidthcontainer .top .content {
+	height:40px;
+	font-family: 'open sans', Arial, sans-serif;
+    font-size: 20px;
+    color: #b7b7b7; 
+	font-weight:400; 
+	text-align: left; 
+	line-height:38px; 
+	text-indent:0px;
+}
+
+.fullwidthcontainer .top .content {background-position: bottom right;}

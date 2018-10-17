@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+	<title></title>
+
+	<link rel="stylesheet" type="text/css" href="sam/admin/include/combine.php-b=-&amp;type=css&amp;cache=1&amp;min=1&amp;files=-sam-admin-include-trinkets-AdvancedPublishingTrinket-style.css,-sam-admin-include-trinkets-BannerTrinket-style.css,-sam-admin-include-trinkets-StoryTrinket-style.css" /><script src="sam/admin/include/scripts/jquery.min.js"></script><script src="sam/admin/include/combine.php-b=-&amp;type=javascript&amp;cache=1&amp;min=1&amp;files=-sam-admin-include-trinkets-NavTrinket-navigation.js"></script><script>
+	dataLayer = [{"sportType":"Baseball","orgName":"East Sac Little League","orgId":"3605","pageUrl":"www.eastsaclittleleague.com","pageType":"\/home.php","bluestarProperty":"Bonzi"}];
+</script>
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-M5GMGT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M5GMGT');</script>
+<!-- End Google Tag Manager -->
+
+
+	<link rel="stylesheet" type="text/css" href="sam/front_core_files/templates/FullWidthHeaderLayout/css/reset.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="sam/front_core_files/css/default.css" media="screen,print" />
+	<link rel="stylesheet" type="text/css" href="sam/front_core_files/templates/FullWidthHeaderLayout/css/style.css" media="screen,print" />
+	<link rel="stylesheet" type="text/css" href="sam/front_core_files/templates/FullWidthHeaderLayout/css/left_column.css" media="screen,print" />
+
+	<link rel="stylesheet" type="text/css" href="sam/front_core_files/templates/FullWidthHeaderLayout/css/extra.css"/>	<link rel="stylesheet" type="text/css" href="cm/layout/css/overrides.css" media="screen,print" />
+</head>
+<body class="layout_leftcolumn">
+
+    <!--// begin header //-->
+	<div class="header">
+				<div class="hdr_name">East Sac Little League</div>
+		<a href="home.php.html"><div class="header_home_link"></div></a>
+		<a href="http://www.eastsaclittleleague.com/sam/registration/login.php" title="Member Login" class="member_login"></a>
+	</div>
+	<!--// end header //-->
+
+	<!--// begin horizontal navbar //-->
+	<div class="hnav">
+		<div class="hmenu">
+			<ul class="cssMenu cmDown" id="frontMenu-Main Menu" ><li id="mb-399765" class="parent cmFirst "><a class="button-text" href="welcome.html" style="" target="_top">Home</a><span class="buttonArrow"></span><ul class="cssMenu cmDown"><li id="mb-832713" class=" cmFirst cmLast"><a class="button-text" href="https://www.facebook.com/eastsacll/" style="" target="_blank">Visit Us on Facebook!</a><span class="iefix">&nbsp;</span></li></ul><span class="iefix">&nbsp;</span></li><li id="mb-423245" class="parent  "><a class="button-text" href="league-info.html" style="" target="_top">League Info</a><span class="buttonArrow"></span><ul class="cssMenu cmDown"><li id="mb-776825" class=" cmFirst "><a class="button-text" href="home.php-layout=6029877.html" style="" target="_top">About Us</a><span class="iefix">&nbsp;</span></li><li id="mb-776925" class="  "><a class="button-text" href="home.php-layout=6029977.html" style="" target="_top">Board of Directors</a><span class="iefix">&nbsp;</span></li><li id="mb-776885" class="  "><a class="button-text" href="home.php-layout=6029937.html" style="" target="_top">Game Fields</a><span class="iefix">&nbsp;</span></li><li id="mb-408985" class="parent  "><a class="button-text" href="registration.html" style="" target="_top">Registration</a><span class="buttonArrow"></span><ul class="cssMenu cmDown"><li id="mb-399905" class=" cmFirst "><a class="button-text" href="credit_card.html" style="" target="_top">Credit Card Policies</a><span class="iefix">&nbsp;</span></li><li id="mb-399925" class="  cmLast"><a class="button-text" href="refunds.html" style="" target="_top">Refund Policy</a><span class="iefix">&nbsp;</span></li></ul><span class="iefix">&nbsp;</span></li><li id="mb-777925" class="  "><a class="button-text" href="doclib/ESLL_Boundary.pdf" style="" target="_blank">ESLL Boundary Map</a><span class="iefix">&nbsp;</span></li><li id="mb-776605" class="  "><a class="button-text" href="home.php-layout=6028457.html" style="" target="_top">Documents & Forms</a><span class="iefix">&nbsp;</span></li><li id="mb-919837" class="  "><a class="button-text" href="weatherguidelines.html" style="" target="_top">Inclement Weather Guidelines</a><span class="iefix">&nbsp;</span></li><li id="mb-777185" class="  cmLast"><a class="button-text" href="home.php-layout=6030317.html" style="" target="_top">Constitution & Bylaws</a><span class="iefix">&nbsp;</span></li></ul><span class="iefix">&nbsp;</span></li><li id="mb-457765" class="parent  "><a class="button-text" href="baseball.html" style="" target="_top">Baseball</a><span class="buttonArrow"></span><ul class="cssMenu cmDown"><li id="mb-1039137" class=" cmFirst "><a class="button-text" href="home.php-layout=8540285.html" style="" target="_top">2018 Baseball All Stars</a><span class="iefix">&nbsp;</span></li><li id="mb-777805" class="  "><a class="button-text" href="doclib/2018%20ESLL%20Baseball%20Division%20Age%20Guidelines.pdf" style="" target="_blank">2018 Baseball Age Guidelines & Chart</a><span class="iefix">&nbsp;</span></li><li id="mb-776625" class="  "><a class="button-text" href="home.php-layout=6029637.html" style="" target="_top">Tee Ball</a><span class="iefix">&nbsp;</span></li><li id="mb-776645" class="  "><a class="button-text" href="home.php-layout=6029657.html" style="" target="_top">Single A</a><span class="iefix">&nbsp;</span></li><li id="mb-776665" class="  "><a class="button-text" href="home.php-layout=6029677.html" style="" target="_top">AA</a><span class="iefix">&nbsp;</span></li><li id="mb-776685" class="  "><a class="button-text" href="home.php-layout=6029697.html" style="" target="_top">AAA</a><span class="iefix">&nbsp;</span></li><li id="mb-776705" class="  "><a class="button-text" href="home.php-layout=6029717.html" style="" target="_top">Majors</a><span class="iefix">&nbsp;</span></li><li id="mb-952397" class="  "><a class="button-text" href="home.php-layout=7780765.html" style="" target="_top">Post-Season Play</a><span class="iefix">&nbsp;</span></li><li id="mb-706465" class="  cmLast"><a class="button-text" href="fallball.html" style="" target="_top">Fall Ball</a><span class="iefix">&nbsp;</span></li></ul><span class="iefix">&nbsp;</span></li><li id="mb-458665" class="parent  "><a class="button-text" href="softball.html" style="" target="_top">Softball </a><span class="buttonArrow"></span><ul class="cssMenu cmDown"><li id="mb-1039377" class=" cmFirst "><a class="button-text" href="home.php-layout=8542105.html" style="" target="_top">2018 Softball All Stars</a><span class="iefix">&nbsp;</span></li><li id="mb-777845" class="  "><a class="button-text" href="doclib/2018%20Softball%20Division,%20Age%20Chart.pdf" style="" target="_blank">2018 Softball Age Chart</a><span class="iefix">&nbsp;</span></li><li id="mb-776725" class="  "><a class="button-text" href="home.php-layout=6029757.html" style="" target="_top">Rookies</a><span class="iefix">&nbsp;</span></li><li id="mb-776745" class="  "><a class="button-text" href="home.php-layout=6029777.html" style="" target="_top">Minors</a><span class="iefix">&nbsp;</span></li><li id="mb-776765" class="  "><a class="button-text" href="home.php-layout=6029797.html" style="" target="_top">Majors</a><span class="iefix">&nbsp;</span></li><li id="mb-979697" class="  "><a class="button-text" href="home.php-layout=7997145.html" style="" target="_top">Post-Season Play</a><span class="iefix">&nbsp;</span></li><li id="mb-763405" class="  cmLast"><a class="button-text" href="fbsoftball.html" style="" target="_top">Fall Ball Softball</a><span class="iefix">&nbsp;</span></li></ul><span class="iefix">&nbsp;</span></li><li id="mb-458725" class="  "><a class="button-text" href="schedule.html" style="" target="_top">Game Schedule</a><span class="iefix">&nbsp;</span></li><li id="mb-938037" class="parent  "><a class="button-text" href="home.php-layout=7625429.html" style="" target="_top">Events</a><span class="buttonArrow"></span><ul class="cssMenu cmDown"><li id="mb-946777" class=" cmFirst "><a class="button-text" href="home.php-layout=7718569.html" style="" target="_top">ESLL Wienery Days</a><span class="iefix">&nbsp;</span></li><li id="mb-946797" class="  "><a class="button-text" href="home.php-layout=7718589.html" style="" target="_top">Softball Day @ Sac State</a><span class="iefix">&nbsp;</span></li><li id="mb-946737" class="  cmLast"><a class="button-text" href="home.php-layout=7718489.html" style="" target="_top">ESLL 2018 Hit-A-Thon Fundraiser</a><span class="iefix">&nbsp;</span></li></ul><span class="iefix">&nbsp;</span></li><li id="mb-458685" class="  "><a class="button-text" href="calendar.html" style="" target="_top">Calendar</a><span class="iefix">&nbsp;</span></li><li id="mb-429785" class="parent  "><a class="button-text" href="volunteer.html" style="" target="_top">Volunteer</a><span class="buttonArrow"></span><ul class="cssMenu cmDown"><li id="mb-777025" class=" cmFirst "><a class="button-text" href="home.php-layout=6030117.html" style="" target="_top">Volunteer to Manage or Coach</a><span class="iefix">&nbsp;</span></li><li id="mb-777125" class="  "><a class="button-text" href="home.php-layout=6030237.html" style="" target="_top">Volunteer for Grounds Committee </a><span class="iefix">&nbsp;</span></li><li id="mb-777145" class="  "><a class="button-text" href="home.php-layout=6030257.html" style="" target="_top">Volunteer for Snack Bar Committee</a><span class="iefix">&nbsp;</span></li><li id="mb-810769" class="  cmLast"><a class="button-text" href="home.php-layout=6417125.html" style="" target="_top">Volunteer for Events Committee</a><span class="iefix">&nbsp;</span></li></ul><span class="iefix">&nbsp;</span></li><li id="mb-458705" class="  "><a class="button-text" href="sponsors.html" style="" target="_top">Sponsors</a><span class="iefix">&nbsp;</span></li><li id="mb-457705" class="  "><a class="button-text" href="faq.html" style="" target="_top">FAQs</a><span class="iefix">&nbsp;</span></li><li id="mb-841073" class="  cmLast"><a class="button-text" href="contact.html" style="" target="_top">Contact Us</a><span class="iefix">&nbsp;</span></li></ul>			<br style="clear:both;"/>
+		</div>
+	</div>
+	<!--// end horizontal navbar //-->
+
+    <!--// begin full width content //-->
+	<div class="fullwidthcontainer">
+			</div>
+    <!--// end full width content //-->
+
+<div class="mainContainer clearfix">
+
+	<!--// begin content //-->
+	<div class="content_bg">
+
+		<!--// begin left column //-->
+		<div class="col_left" align="center">
+			<div class="col_left_top"></div>
+
+			<!--// begin widget container //-->
+			<div class="advPubTkt-content"><p style="text-align: left;">
+  <span style="font-family: impact, sans-serif; font-size: 12pt;"><span style="font-size: small;">Proud Sponsors of ESLL</span></span>
+</p>
+<p>
+  <span style="font-size: 10pt;"><a href="https://www.wellsfargo.com" target="_blank" rel="noopener"><img style="float: left;" src=
+  "imagedata/logo_wells_fargo_450x300.png" border="0" width="195" height="130" /><!-- pagebreak --></a></span>
+</p>
+<p>
+  <a href="https://www.westernhealth.com" target="_blank" rel="noopener"><img style="float: left;" src="imagedata/western_health_advantage.jpg"
+  border="0" width="198" height="134" /></a>
+</p>
+<p>
+   
+</p>
+<p>
+   
+</p>
+<p>
+   
+</p>
+<p>
+   
+</p>
+<p>
+   
+</p>
+<p>
+   
+</p>
+<p>
+   
+</p></div>			<!--// end widget container //-->
+
+		</div>
+		<!--// end leftcolumn //-->
+
+		<!--// begin center column //-->
+		<div class="col_ctr" align="center">
+			<div class="col_ctr_top"></div>
+
+			<!--// begin widget container //-->
+			<div class="sam_banner"></div>		<div class="wgt_container">
+			<div class="top">
+				<div class="right">
+					<div class="content">
+						Constitution &amp; Bylaws 					</div>
+				</div>
+			</div>
+			<div class="mid">
+				<div class="right">
+					<div class="content" align="left">
+						<div class="ST_StoryTrinket"><p><span style="font-size: 12pt;">The Constitution and Bylaws of ESLL govern the operation of our organization. &nbsp;</span></p>
+<p><span style="font-size: 12pt;">The Constitution communicates broad guidelines governed and required by Little League International of all chartered Little League organizations.</span></p>
+<p><span style="font-size: 12pt;">The Bylaws are the working document of ESLL. Our Bylaws are reviewed, amended and adopted by the ESLL Board of Directors on an annual basis, and are intended to address those issues not covered or presented as optional in the Official Regulations, Playing Rules, and Operating Policies of Little League.</span></p>
+<p><span style="font-size: 12pt;">We invite you to review both documents to understand how our league operates, our local rules, and the ideals we strive to uphold for the benefit of all our players.</span></p>
+<p><span style="font-size: 12pt;">Questions? Email us at eastsaclittleleague@gmail.com</span></p>
+<p><span style="font-size: 12pt;"><a rel="noopener" href="doclib/ESLL%20Constitution.pdf" target="_blank"><strong>Constitution, East Sacramento Little League</strong></a></span></p>
+<p><span style="font-size: 12pt;"><strong><a rel="noopener" href="doclib/ESLL%20Bylaws,%20Final,%20Dec.%2012,%202017.pdf" target="_blank">Bylaws, East Sacramento Little League</a></strong></span></p></div>					</div>
+				</div>
+			</div>
+			<div class="bottom">
+				<div class="right">
+					<div class="content">
+						&nbsp;
+					</div>
+				</div>
+			</div>
+		</div>
+					<!--// end widget container //-->
+
+		</div>
+		<!--// end center column //-->
+
+		<div class="clearfix"></div>
+
+	</div>
+	<!--// end content //-->
+
+</div>
+<!--// end #mainContainer //-->
+
+	<!--// begin footer //-->
+	<div class="footer" align="right">
+				<div class="wgt_container">
+			<div class="top">
+				<div class="right">
+					<div class="content">
+											</div>
+				</div>
+			</div>
+			<div class="mid">
+				<div class="right">
+					<div class="content" align="left">
+								<div class="bonzi_logo">
+			<a href="http://www.gobonzi.com" rel="nofollow"><img src="https://assets.connect.stacksports.com/memberhome_footer-logo.png" alt="Online Sports Management Software by Bonzi" border="0" /></a>
+		</div>
+		<div class="footer_content">
+				Copyright &copy; 2001 - 2018 East Sac Little League. All Rights Reserved.<br />
+				<a href="http://www.bonzicentral.com/baseball-softball" rel="nofollow">Online Basketball Registration and Management Software</a><br />
+				&copy; 2001 - 2018 <a href="http://clubandleague.stacksports.com" rel="nofollow">Stack Sports</a>
+		</div>
+						</div>
+				</div>
+			</div>
+			<div class="bottom">
+				<div class="right">
+					<div class="content">
+						&nbsp;
+					</div>
+				</div>
+			</div>
+		</div>
+			</div>
+	<!--// end footer //-->
+
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"1357adfab6","applicationID":"145738956,89362206","transactionName":"YwdXZxBRCxJUW01QCVpNYEELHw0OWF0XSQ5E","queueTime":0,"applicationTime":87,"atts":"T0BUEVhLGBw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

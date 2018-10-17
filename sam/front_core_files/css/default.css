@@ -1,0 +1,503 @@
+/*******************
+auto-applying styles
+********************/
+
+.pageBody 		{ background-color: #333333; margin-top: 20; margin-left: 0; margin: 0; background-image: url("../../../images/bg.png.html");}
+.pageBodyPlain  { background-color: #cccccc; margin-top: 0; margin-left: 0; margin: 0;}
+td { font-family: Arial, Helvetica, sans-serif; font-size: 9pt; color: #000000; text-align: left; }
+p  { font-family: Arial, Helvetica, sans-serif; font-size: 9pt; color: #000000; padding-bottom: .35em; }
+ul { font-family: Arial, Helvetica, sans-serif; font-size: 9pt; color: #000000; }
+ol { font-family: Arial, Helvetica, sans-serif; font-size: 9pt; color: #000000; }
+th { font-family: Arial, Helvetica, sans-serif; font-size: 9pt; color: #000000; }
+
+td.leftSidebar { text-align: left; }
+
+body,td,p,ul,ol,th
+	{ font-family: Arial, Helvetica, sans-serif; font-size: 9pt; color: #000000; }
+
+/* default h* sizes to keep it uniform across browsers */
+h1 {font-size: 2em}
+h2 {font-size: 1.5em}
+h3 {font-size: 1.17em}
+h4 {font-size: 1em}
+h5 {font-size: .83em}
+h6 {font-size: .75em}
+
+A:link		{ color: #cc0000; text-decoration: underline; }
+A:visited	{ color: #666666; text-decoration: underline; }
+A:active	{ color: #666666; text-decoration: underline; }
+A:hover		{ color: #999999; text-decoration: underline; }
+
+.wgt_container img { width: auto; max-width: 100%; }
+.wgt_container .CM_registration img { width: auto; max-width: auto; }
+
+/****************************************
+other styles for class attributes of tags
+*****************************************/
+
+/* Black/White text (general use) */
+.smallTextBlack			{ font-family: Arial, Helvetica, sans-serif; color: #000000; font-size: 8pt; font-weight: normal;  }
+.smallTextBoldBlack		{ font-family: Arial, Helvetica, sans-serif; color: #000000; font-size: 8pt; font-weight: bold; }
+.textBlack				{ font-family: Arial, Helvetica, sans-serif; color: #000000; font-size: 10pt; font-weight: normal;  }
+.textBoldBlack			{ font-family: Arial, Helvetica, sans-serif; color: #000000; font-size: 10pt; font-weight: bold; }
+.titleBlack				{ font-family: Arial, Helvetica, sans-serif; color: #000000; font-size: 12pt; font-weight: normal;  }
+.titleBoldBlack			{ font-family: Arial, Helvetica, sans-serif; color: #000000; font-size: 12pt; font-weight: bold; }
+.mediumTitleBlack		{ font-family: Arial, Helvetica, sans-serif; color: #000000; font-size: 14pt; font-weight: normal;  }
+.mediumTitleBoldBlack	{ font-family: Arial, Helvetica, sans-serif; color: #000000; font-size: 14pt; font-weight: bold;}
+.largeTitleBlack		{ font-family: Arial, Helvetica, sans-serif; color: #000000; font-size: 16pt; font-weight: normal;  }
+.largeTitleBoldBlack	{ font-family: Arial, Helvetica, sans-serif; color: #000000; font-size: 16pt; font-weight: bold;}
+.smallTextWhite			{ font-family: Arial, Helvetica, sans-serif; color: #ffffff; font-size: 8pt; font-weight: normal;  }
+.smallTextBoldWhite		{ font-family: Arial, Helvetica, sans-serif; color: #ffffff; font-size: 8pt; font-weight: bold; }
+.textWhite				{ font-family: Arial, Helvetica, sans-serif; color: #ffffff; font-size: 10pt; font-weight: normal;  }
+.textBoldWhite			{ font-family: Arial, Helvetica, sans-serif; color: #ffffff; font-size: 10pt; font-weight: bold; }
+.titleWhite				{ font-family: Arial, Helvetica, sans-serif; color: #ffffff; font-size: 12pt; font-weight: normal;  }
+.titleBoldWhite			{ font-family: Arial, Helvetica, sans-serif; color: #ffffff; font-size: 12pt; font-weight: bold; }
+.mediumTitleWhite		{ font-family: Arial, Helvetica, sans-serif; color: #ffffff; font-size: 14pt; font-weight: normal;  }
+.mediumTitleBoldWhite	{ font-family: Arial, Helvetica, sans-serif; color: #ffffff; font-size: 14pt; font-weight: bold;}
+.largeTitleWhite		{ font-family: Arial, Helvetica, sans-serif; color: #ffffff; font-size: 16pt; font-weight: normal;  }
+.largeTitleBoldWhite	{ font-family: Arial, Helvetica, sans-serif; color: #ffffff; font-size: 16pt; font-weight: bold;}
+.contactInfo			{ font-family: Arial, Helvetica, sans-serif; color: #000000; font-size: 8pt; }
+.contactInfo:link		{ color: #0852A5; text-decoration: underline; }
+.contactInfo:visited	{ color: #0852A5; text-decoration: underline; }
+.contactInfo:active		{ color: #0852A5; text-decoration: underline; }
+.contactInfo:hover		{ color: #FBD632; text-decoration: underline; }
+
+/* Colored text (application specific) */
+.text					{ font-family: Arial, Helvetica, sans-serif; font-size: 10pt; color: #000000; font-weight: normal; }
+.textBold				{ font-family: Arial, Helvetica, sans-serif; font-size: 10pt; color: #000000; font-weight: bold; }
+.title					{ font-family: Arial, Helvetica, sans-serif; font-size: 12pt; color: #000000; font-weight: normal;  }
+.titleBold				{ font-family: Arial, Helvetica, sans-serif; font-size: 12pt; color: #000000; font-weight:bold; }
+.smallTitle			{ font-family: Arial, Helvetica, sans-serif; font-size: 12pt; color: #000000; font-weight: normal;  }
+.smallTitleBold		{ font-family: Arial, Helvetica, sans-serif; font-size: 12pt; color: #000000; font-weight:bold; }
+.mediumTitle			{ font-family: Arial, Helvetica, sans-serif; font-size: 14pt; color: #000000; font-weight: normal;  }
+.mediumTitleBold		{ font-family: Arial, Helvetica, sans-serif; font-size: 14pt; color: #000000; font-weight:bold; }
+.largeTitle				{ font-family: Arial, Helvetica, sans-serif; font-size: 16pt; color: #000000; font-weight: normal;  }
+.largeTitleBold			{ font-family: Arial, Helvetica, sans-serif; font-size: 16pt; color: #000000; font-weight:bold; }
+
+/* Other (application specific) */
+.question 				{ font-family: Arial, Helvetica, sans-serif; font-size: 12pt; color: #330066; }
+.errorMsg				{ font-family: Arial, Helvetica, sans-serif; color: #FF0000; font-weight: bold; }
+.button					{ background: #000000; color: #ffffff; }
+.tableHeader			{ background-color: #999999; }
+.tableBordered			{ border-left-color: #000000; border-top-color: #000000; border-right-color: #000000;
+						  border-bottom-color: #000000; background-color: #ffffff; border-style: solid; border-width: 1px;}
+
+table.calendar td.tableBordered { width: 14%; }
+table.calendar.tableBordered { width: 100%; }
+
+.scrollerButton			{ background-color: #000000; }
+.teamScrollerButton		{ background-color: #000000; }
+
+/* Player Page Background Colors */
+.ppDataBorder		{ background-color: #333333; }
+.ppDataBg			{ background-color: #cccccc; }
+.ppDataText			{ color: #ffffff; font-size: 9pt; }
+.ppBioText			{ color: #000000; font-size: 8pt; font-weight: bold; }
+.ppContentBg		{ background-color: #8b8b8b; }
+.ppMovText			{ color: #013466; font-size: 8pt; font-weight: bold; }
+.ppMovText:link		{ color: #013466; text-decoration: underline; }
+.ppMovText:visited	{ color: #013466; text-decoration: underline; }
+.ppMovText:active	{ color: #013466; text-decoration: underline; }
+.ppMovText:hover	{ color: #013466; text-decoration: underline; }
+.ppPageBg			{ background-color: #013466; }
+.ppName 			{ color: #ffffff; font-weight: bold; background-color: #013466; background-image: url("../../../images/folder_tab_sliver.gif"); }
+
+/* Group Ticket Styles */
+table.foregrnd	{ border: 1px solid black; background: #d4d4d4; }
+table.backgrnd	{ background: #666666; }
+.tktTextSmallBold 	{ font-family: Arial, Helvetica, sans-serif; font-size: 8pt; color: #213F2C; font-weight:bold; }
+.tktTextMediumBold	{ font-family: Arial, Helvetica, sans-serif; font-size: 10pt; color: #213F2C; font-weight:bold; }
+.tktTextBold		{ font-family: Arial, Helvetica, sans-serif; font-size: 12pt; color: #213F2C; font-weight:bold; }
+
+/* .sf* classes are used in the store stuff. */
+/*  Try to keep these styles at the END of the stylesheet?? */
+.sfSlotText { font-family:Verdana; font-size:9px; }
+.sfCornerTable { background-color: #cccccc; border-color: #cccccc; border-style: solid; border-width: 1px; }
+.sfBorderAll { border-style: solid; border-color: #000000; border-width: 1px; background-color: #FFFFFF; }
+
+.sfTextnav { font-family: Arial, Helvetica, sans-serif; color: #000000; font-size: 8pt; }
+.sfTextnavS { font-family: Arial, Helvetica, sans-serif; color: #000000; font-size: 8pt; }
+.sfTextCrumb { font-family: Arial, Helvetica, sans-serif; color: #000000; font-size: 8pt; text-decoration: none; } /* bread-crumb text */
+
+.sfTableColor1 { background-color: #57c2fd; } /* left side of top header */
+.sfTableColor2 { background-color: #026aa3; } /* right side of top header */
+.sfTableColor3 { background-color: #cccccc; }
+.sfTableColor4 { background-color: #999999; } /* check out button table */
+
+.sfTableColor5 { background-color: #ffffff; }
+.sfTableColor6 { background-color: #000000; }
+
+.sfMenu 	{ color: #000000; background-color: #57c2fd; }
+.sfMenuOver	{ color: #FFFFFF; background-color: #026aa3; }
+
+.sfMessageText { font-family: Arial, Helvetica, sans-serif; color: #ffffff; font-size: 10pt; font-weight: bold; }
+.sfButton	{ background-color: #026aa3; }
+
+.sfGridLink { font-size: 9px; font-weight: bold; }
+
+.sfPriceBox { background-color: #ffffff; border: none; }
+
+/* Colors here just for the page editor */
+.pageEditColor1 { color: #FBD632; }
+.pageEditColor2 { color: #0D01AC; }
+
+/* Front Menu Global Styles */
+ul.cssMenu,
+ul.cssMenu ul{
+	list-style: none;
+	list-style-position: outside;	/* IE decides to disregard list-style: none, so this is needed to override sam_default.css */
+	margin: 0;
+	padding: 0;
+}
+
+ul.cssMenu ul{
+	display: none;
+	position: absolute;
+	margin-right: 0;
+	z-index: 400;
+}
+
+/* style for all buttons */
+ul.cssMenu li{
+	margin: 0;
+	padding: 0;
+	border: none;
+	float: left;
+	background-image: url("../../../images/buttons/master_button.png.html");
+	background-repeat: no-repeat;
+	width: 150px;
+	height: 25px;
+	font-size: 16px;
+	text-align: left;
+	position: relative;
+	background-color: transparent;
+	cursor: default;
+	z-index: 750;
+}
+
+ul.cssMenu li ul li ul{
+	left: 150px;
+	top: -2px;
+}
+
+ul.cssMenu li .button-text {
+	background-color: transparent;
+	display: block;
+}
+
+ul.cssMenu li a:hover,
+ul.cssMenu li.over .button-text {
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+ul.cssMenu li a{
+	display: block;
+	color: inherit;
+	text-decoration: none;
+	width: 100%;
+	height: 100%;
+}
+
+ul.cssMenu li a.folder-button {
+	cursor: default;
+}
+
+ul.cssMenu li:hover,
+ul.cssMenu li.over{
+	background-color: transparent;
+	background-image: url("../../../images/buttons/master_button_over.png.html");
+	background-repeat: no-repeat;
+}
+
+ul.cssMenu:after{
+	clear: both;
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+/* style for buttons in a sub menu */
+ul.cssMenu li li{
+	background-image: none;
+	border: 1px solid black;
+	background-color: #ddd;
+	z-index: 1000;
+}
+
+ul.cssMenu li li:hover,
+ul.cssMenu li li.over{
+	background-image: none;
+	background-color: #ccc;
+}
+
+ul.cssMenu ul li{
+	display: block;
+}
+
+/*
+ * Hide sub menus that are not hovered over.
+ * It only works for 5 levels deep.  If for some reason you need
+ * more, add more here
+ */
+ul.cssMenu ul,
+ul.cssMenu li.over ul ul,
+ul.cssMenu li.over li.over ul ul,
+ul.cssMenu li.over li.over li.over ul ul,
+.no-touch ul.cssMenu li:hover ul ul,
+.no-touch ul.cssMenu li:hover li:hover ul ul,
+.no-touch ul.cssMenu li:hover li:hover li:hover ul ul{
+  display: none;
+}
+
+/* show hovered submenus */
+ul.cssMenu li.over ul,
+ul.cssMenu li.over li.over ul,
+ul.cssMenu li.over li.over li.over ul,
+ul.cssMenu li.over li.over li.over li.over ul,
+.no-touch ul.cssMenu li:hover ul,
+.no-touch ul.cssMenu li:hover li:hover ul,
+.no-touch ul.cssMenu li:hover li:hover li:hover ul,
+.no-touch ul.cssMenu li:hover li:hover li:hover li:hover ul{
+	display: block;
+}
+
+/* RIGHT type menus */
+
+ul.cmRight span.buttonArrow {
+	float: right;
+	position: absolute;
+	right: 0pt;
+	top: 0pt;
+	background-position: 0 0;
+}
+
+ul.cmRight li{
+	float: none;
+}
+
+ul.cmRight li ul{
+	left: 150px;
+	top: -2px;
+}
+
+/* DOWN type menus */
+
+ul.cmDown span.buttonArrow {
+	float: right;
+	position: absolute;
+	right: 0pt;
+	top: 0pt;
+	//background-image: url("../../../images/buttons/arrow_down.png.html");
+	background-position: 0 0;
+}
+
+ul.cmDown li{
+	float: left;
+}
+ul.cmDown li li{
+	float: none;
+}
+
+ul.cmDown li ul{
+	left: 0;
+	top: 20px;
+}
+
+/* IE HACK: IE needs some element to be at the end of the <li>
+ * on menu items or it will show some padding.  For Chrome, that
+ * element causes problems. So this makes the filler element only show in IE
+ */
+ul.cssMenu .iefix { display: inline; }
+html>/**/body ul.cssMenu .iefix { display: none; }
+
+/* Scroller Positioned Elements */
+#scrollerUpControl{ position:absolute; left:20; top:2; z-index:1; text-align: right; }
+#scrollerDownControl{position:absolute; left:20; top:20; z-index:1; text-align: right; }
+#scrollerContainer{position:absolute; width:5; height:5; overflow:hidden; top:0; left:2; clip:rect(0,5,5,0); visibility:hidden}
+#scrollerContent{position:absolute; top:0; left:0; }
+.pageEditColor2 { color: #0D01AC; }
+
+/* Washington State Concussion Classes */
+
+.read_concussion_title,
+.read_concussion_text
+	{
+	font-family: Arial, Helvetica, sans-serif;
+	}
+
+.read_concussion_title
+	{
+	color: #000000; font-size: 12pt; font-weight: bold;text-align:center;
+	}
+
+.read_concussion_text
+	{
+	color: #000000; font-size: 8pt; font-weight: normal;text-align:left;
+	}
+
+	div.samOverlay {
+	background-color: #000000;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	opacity: 0.5;
+	filter:alpha(opacity=50);
+	cursor:not-allowed;
+}
+
+div.samOverlay#modal_overlay
+	 { z-index: 908000; }
+iframe#modalIFrame,
+iframe#reg_reconciliationIFrame,
+iframe#assignCoachIFrame
+	 { z-index: 908001; }
+
+div.samOverlay#timeout_overlay
+	{ z-index: 908050; }
+
+div.samOverlay#loginModal_overlay
+	{ z-index: 910000; }
+iframe#loginModalIFrame
+	{ z-index: 910001; }
+
+
+.registration #login
+	{position: absolute; left: 295px; top: 280px; margin: 0px; margin-top: -1;}
+.registration #newAccount
+	{position: absolute; left: 295px; top: 280px; margin: 0px; margin-top: -1;}
+.registration #forgot
+	{position: absolute; left: 295px; top: 280px; margin: 0px; margin-top: -1;}
+.registration .clearer
+{
+	height:1px;
+	overflow:hidden;
+	clear:both;
+	margin-top:-1px;
+}
+
+.footer_content {
+line-height:15px; color:#FFFFFF; padding:4px 0 0 0; width:870px; text-align:right; font-size:10px; font-family:Verdana, Arial, Helvetica, sans-serif; float:right;
+}
+
+.bonzi_logo {
+width:130px; height:55px; float:right;
+}
+
+.bonzi_logo img {
+margin:10px 10px 0 10px;
+}
+
+/*  Content Manager Defaults */
+.mainContainer pre { white-space: pre-wrap; }
+
+
+/****************************************
+Location / Standings Page Style (sam\paul.bonzidev.com\htdocs\sam\location\location.php)
+*****************************************/
+
+.curCity {
+margin-top:15px;
+border: 1px solid #ccc;
+height:50px;
+line-height:50px;
+font-size:20px;
+text-indent:15px;
+background-image:url("../images/wht_gry_bg_h50.png");
+}
+
+.locationrow {
+border-bottom: 1px solid #ccc;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+line-height:140%;
+background-image:url("../images/wht_gry_bg_h50.png");
+background-repeat:repeat-x;
+background-color:#F2F2F2;
+padding:10px 25px 10px 25px;
+}
+
+.address {
+float:left;
+width:50%;
+}
+
+.directions {
+float:left;
+width:50%;
+}
+
+.clear {
+clear:both;
+}
+
+.tstt-tooltip {
+	background-color: #FFFFFF;
+	border: 2px solid #777777;
+	border-radius: 2px;
+	z-index: 1000;
+}
+
+.tstt-tooltip .tstt-pointer {
+	background-image: url('../images/popout_arrows.png');
+	width: 16px;
+	height: 32px;
+}
+
+.tstt-tooltip .tstt-pointer.tstt-right {
+	background-position: -16px;
+}
+
+.convertchoices {
+	text-align:center;
+}
+
+#convert_button {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f9f9f9), color-stop(1, #e9e9e9) );
+	background:-moz-linear-gradient( center top, #f9f9f9 5%, #e9e9e9 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#e9e9e9');
+	background-color:#f9f9f9;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	color:#666666;
+	font-family:arial;
+	font-size:26px;
+	line-height:1.4em;
+	font-weight:bold;
+	padding:12px 30px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #ffffff;
+	margin-top:20px;
+	margin-bottom:20px;
+	max-width:550px;
+}
+
+#convert_button:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #e9e9e9), color-stop(1, #f9f9f9) );
+	background:-moz-linear-gradient( center top, #e9e9e9 5%, #f9f9f9 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#f9f9f9');
+	background-color:#e9e9e9;
+}
+
+#convert_button:active {
+	position:relative;
+	top:1px;
+}
+
+
+#never-registered-link {
+	font-size:19px;
+	color:#0066CC;
+	text-decoration:underline;
+	text-align:center;
+}

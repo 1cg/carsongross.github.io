@@ -1,0 +1,13 @@
+/* << ----------------// Center column //---------------->> */
+
+.col_ctr {
+float:left;
+margin:0 0 0 0;
+padding:0 0 0 0;
+width:800px;
+}
+
+
+/* << ----------------// Center widget //---------------->> */
+
+.col_ctr .wgt_container { width: 790px; margin: 0 0 10px 0; }

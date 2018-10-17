@@ -1,0 +1,38 @@
+@CHARSET "UTF-8";
+ul.bonzi-breadcrumb
+{
+	position: relative;
+	float: left;
+	height: 100%;
+	border: none;
+	overflow: hidden;
+}
+
+ul.bonzi-breadcrumb > li
+{
+	float: right;
+	height: 100%;
+	border: none;
+	margin: 0px;
+	padding: 0px 20px 0px 8px;
+	background: transparent url('jquery.ui.breadcrumb/breadcrumb-separator.png') no-repeat scroll right center;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+ul.bonzi-breadcrumb > li a
+{
+	color: inherit;
+}
+
+ul.bonzi-breadcrumb > li:first-child
+{
+	background-image: none;
+}
+
+ul.bonzi-breadcrumb > li:first-child,
+ul.bonzi-breadcrumb > li:first-child a
+{
+	cursor: default;
+	text-decoration: none;
+}
